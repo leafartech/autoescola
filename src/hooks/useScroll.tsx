@@ -8,6 +8,7 @@ const useScroll = () => {
 
   if (typeof window !== 'undefined') {
     useEffect(() => {
+      setScreenWidth(window.screen.width)
       const handleScroll = () => {
         setScrollPosition(window.scrollY)
       }
@@ -17,9 +18,8 @@ const useScroll = () => {
       return () => {
         window.removeEventListener("scroll", handleScroll)
       }
+      
     }, [])
-
-    setScreenWidth(window.screen.width)
   }
 
   const router = usePathname()
