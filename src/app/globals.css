@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bottom-line {
+        @apply before:absolute before:bottom-0 before:w-full before:h-[2px] before:bg-my
+    }
+}
+
+.parallax {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('../../public/images/bg2.png');
+}
+.bg {
+    background: linear-gradient(135deg, #E17233 0%, #DB570C 48.44%, #E17233 100%);
+}
+.back-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../public/images/bg3.png');
+}
+@media (max-width: 425px) {
+    .parallax {
+        background-attachment: normal!important;
+    }
+    .back-img {
+        background-image: url('../../public/images/bg5.png')
+    }
+}
