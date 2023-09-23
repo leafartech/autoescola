@@ -24,6 +24,12 @@ const useScroll = () => {
 
   const router = usePathname()
 
+  if (typeof window !== 'undefined') {
+    useEffect(() => {
+      setScreenWidth(window.screen.width)
+    }, [])
+  }
+
   const threshold = 400
   let backgroundColor = ''
   let letterColor = 'text-white/80'
